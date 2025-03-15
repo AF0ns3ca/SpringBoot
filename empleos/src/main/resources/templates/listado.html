@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puestos Vacantes</title>
+</head>
+<body>
+
+    <h1>Lista de puestos vacantes</h1>
+    <ol>
+        <li th:each="tmpEmp:${empleos}" th:text="${tmpEmp}"></li>
+    </ol>
+
+    <table>
+        <tr>
+            <th>Lista de puentos vacantes</th>
+        </tr>
+        <!-- Para mostrar los elementos de una lista hacemos th each, asignamos una variable temporal y despues el nombre del atributo que se va a iterar, en este caso el nombre de la lista. Despues en cada una de las celdas pondremos la variable temporal, e ire mostrando cada elemento de la lista en cada iteracion -->
+        <tr th:each="tmpEmp : ${empleos}">
+            <td th:text="${tmpEmp}"></td>
+        </tr>
+    </table>
+
+    <a href="/">Volver a inicio</a>
+</body>
+</html>

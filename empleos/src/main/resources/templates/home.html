@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página Principal</title>
+  </head>
+  <body>
+    <div>
+      <!-- Formas de añadir atributos por Thymeleaf -->
+      <!-- <h1 th:text="${mensaje}"></h1>
+      <h2>Hoy es [[${fecha}]]</h2> -->
+
+      <h1>Bienvenido</h1>
+      <h2>Oferta de Trabajo</h2>
+      <h3 th:text="'Titulo: ' + ${nombre}"></h3>
+      <h3 th:text="'Fecha Pub: ' + ${fechaPub}"></h3>
+      <h3 th:text="'Salario: ' + ${salario}"></h3>
+      <h3 th:text="'Vigente: ' + ${vigente}"></h3>
+      <a href="/listado">Lista de puestos vacantes</a>
+    </div>
+  </body>
+</html>
