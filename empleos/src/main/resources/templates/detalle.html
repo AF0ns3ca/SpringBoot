@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle Vacante</title>
+</head>
+<body>
+    <!-- Modo de hacer visibles una entidad y sus atributos -->
+    <h1>Dealle de la Oferta</h1>
+    <h3 th:text="'Nombre: ' + ${vacante.nombre}"></h3>
+    <h3 th:text="'Fecha: ' + ${vacante.fecha}"></h3>
+    <h3 th:text="'Salario: ' + ${vacante.salario}"></h3>
+    <h3 th:text="'Descripcion del Puesto: ' + ${vacante.descripcion}"></h3>
+</body>
+</html>
